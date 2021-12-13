@@ -1,0 +1,11 @@
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\bin\Release\Ori Assistent.exe.config
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\bin\Release\Ori Assistent.exe
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\bin\Release\Ori Assistent.pdb
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.csproj.SuggestedBindingRedirects.cache
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori_Assistent.OriAssistentStartForm.resources
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori_Assistent.Properties.Resources.resources
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.csproj.GenerateResource.cache
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.csproj.CoreCompileInputs.cache
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.exe
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.pdb
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.csproj.AssemblyReference.cache
