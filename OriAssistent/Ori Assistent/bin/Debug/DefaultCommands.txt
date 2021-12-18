@@ -21,3 +21,4 @@ Hide commands
 Shut down the computer
 Switch off voice
 Switch on voice
+Put the computer to sleep

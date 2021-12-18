@@ -43,6 +43,8 @@
             this.TimerSpeaking = new System.Windows.Forms.Timer(this.components);
             this.CurrentDateTime = new System.Windows.Forms.Label();
             this.CurrentDate = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.HibernateTimer = new System.Windows.Forms.TextBox();
             this.LeftSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconImageBox)).BeginInit();
             this.Settings.SuspendLayout();
@@ -124,6 +126,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Settings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Settings.Controls.Add(this.label1);
+            this.Settings.Controls.Add(this.HibernateTimer);
             this.Settings.Controls.Add(this.label2);
             this.Settings.Controls.Add(this.TimerForShotDown);
             this.Settings.Controls.Add(this.isAutoRunCheckBox);
@@ -209,6 +213,25 @@
             this.CurrentDate.Interval = 1000;
             this.CurrentDate.Tick += new System.EventHandler(this.CurrentDate_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(44, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hibernate timer";
+            // 
+            // HibernateTimer
+            // 
+            this.HibernateTimer.Location = new System.Drawing.Point(12, 102);
+            this.HibernateTimer.Name = "HibernateTimer";
+            this.HibernateTimer.Size = new System.Drawing.Size(26, 26);
+            this.HibernateTimer.TabIndex = 5;
+            this.HibernateTimer.Text = "5";
+            this.HibernateTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // OriAssistentStartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,6 +276,8 @@
         public System.Windows.Forms.Label GreetingsLabel;
         private System.Windows.Forms.Label CurrentDateTime;
         private System.Windows.Forms.Timer CurrentDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox HibernateTimer;
     }
 }
 

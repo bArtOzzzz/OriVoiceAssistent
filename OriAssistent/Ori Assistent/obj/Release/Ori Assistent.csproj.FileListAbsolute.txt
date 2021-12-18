@@ -9,3 +9,7 @@ C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.cspr
 C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.exe
 C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.pdb
 C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.csproj.AssemblyReference.cache
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\bin\Release\Ori Assistent.exe.manifest
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\bin\Release\Ori Assistent.application
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.exe.manifest
+C:\Users\break\Desktop\OriAssistent\Ori Assistent\obj\Release\Ori Assistent.application

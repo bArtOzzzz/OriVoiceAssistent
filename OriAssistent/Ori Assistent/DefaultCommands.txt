@@ -1,19 +1,13 @@
-﻿----------Social-Commands--------------
-Hello
+﻿Hello
 How are you
 Thank you
-----------The-Word-Activator-----------
 Ori
-----------Time-Commands----------------
 What time is it
-----------Settings-Commands------------
 Open settings
 Close settings
 Check start with windows
 Uncheck start with windows
-----------Cancel-Last-Operation---------
 Cancel
-----------Functional-Commands----------
 Stop talking
 Stop listening
 Show commands
@@ -21,3 +15,4 @@ Hide commands
 Shut down the computer
 Switch off voice
 Switch on voice
+Put the computer to sleep

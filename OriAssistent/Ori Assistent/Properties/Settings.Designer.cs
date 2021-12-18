@@ -46,5 +46,17 @@ namespace Ori_Assistent.Properties {
                 this["ShotDownTimer"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int HibernateStateTimer {
+            get {
+                return ((int)(this["HibernateStateTimer"]));
+            }
+            set {
+                this["HibernateStateTimer"] = value;
+            }
+        }
     }
 }

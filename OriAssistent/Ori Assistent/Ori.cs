@@ -83,6 +83,7 @@ namespace Ori_Assistent
             // Автозагрузка сохранений
             isAutoRunCheckBox.DataBindings.Add("Checked", Properties.Settings.Default, "IsAutoRun", true, DataSourceUpdateMode.OnPropertyChanged);
             TimerForShotDown.DataBindings.Add("Text", Properties.Settings.Default, "ShotDownTimer", true, DataSourceUpdateMode.OnPropertyChanged);
+            HibernateTimer.DataBindings.Add("Text", Properties.Settings.Default, "HibernateStateTimer", true, DataSourceUpdateMode.OnPropertyChanged);
 
             // Стартовое системное сообщение
             SystemMessageListBox.Items.Add("System: To view all commands, say Ori \"Show commands\"");
@@ -182,6 +183,11 @@ namespace Ori_Assistent
                     {
                         ChooseAnswer(e, Commands.command8);
                     }
+                    break;
+                case "Put the computer to sleep":
+                    SystemMessageListBox.Items.Add($"You: {socialCommands}");
+                    HibernateState(e);
+                    isCanBeCanseled = true;
                     break;
             }
         }
@@ -474,6 +480,60 @@ namespace Ori_Assistent
             }
         }
 
+        /// <summary>
+        /// Голосовая команда перевода компьютера в сон
+        /// </summary>
+        /// <param name="e"></param>
+        private async void HibernateState(SpeechRecognizedEventArgs e)
+        {
+            string speech = e.Result.Text;
+
+            _tokenSource = new CancellationTokenSource();
+            var token = _tokenSource.Token;
+
+            try
+            {
+                await Task.Run(() => HibernateStateTimer(token));
+            }
+            catch (OperationCanceledException)
+            {
+                ChooseAnswer(e, Commands.command8);
+            }
+            finally
+            {
+                _tokenSource.Dispose();
+            }
+        }
+
+        /// <summary>
+        /// Таймер до перевода в сон
+        /// </summary>
+        /// <param name="token"></param>
+        private void HibernateStateTimer(CancellationToken token)
+        {
+            for (int i = Properties.Settings.Default.HibernateStateTimer; i > 0; i--)
+            {
+                ori.SpeakAsync(i.ToString());
+
+                Thread.Sleep(1000);
+
+                if (token.IsCancellationRequested)
+                {
+                    break;
+                }
+
+                if (i == 1)
+                {
+                    bool isHibernate = Application.SetSuspendState(PowerState.Hibernate , false, true);
+
+                    if (isHibernate == false)
+                    {
+                        SystemMessageListBox.Items.Add("Could not hybernate the system.");
+                    }
+                }
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -497,7 +557,7 @@ namespace Ori_Assistent
         }
 
         /// <summary>
-        /// Устанавливает цвет White при наведении на Settings
+        /// Устанавливает цвет White в качестве Default
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
